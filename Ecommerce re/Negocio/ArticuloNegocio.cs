@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Dominio;
 namespace Negocio
 {
-    internal class ArticuloNegocio
+    public class ArticuloNegocio
     {
         public List<Articulo> listar()
         {
@@ -37,6 +37,33 @@ namespace Negocio
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public void Agregar(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+
+            datos.setearConsulta("insert into Articulo(nombre,descripcion,precio,id_categoria,stock) values(@nombre,@descip,@precio,@idCat,@stock);");
+            datos.setearParametro("@nombre", art.Nombre);
+            datos.setearParametro("@descip", art.Descripcion);
+            datos.setearParametro("@precio", art.precio);
+            datos.setearParametro("@idCat", art.IDcategoria);
+            datos.setearParametro("@stock", art.Stock);
+
+            datos.ejecutarLectura();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al agregar el producto: " + ex.Message);
             }
             finally
             {

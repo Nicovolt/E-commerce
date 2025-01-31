@@ -29,8 +29,20 @@ nombre varchar(50),
 CREATE TABLE Articulo (
     id_articulo INT IDENTITY(1,1) PRIMARY KEY,
     nombre VARCHAR(90) NOT NULL,
+	descripcion VARCHAR(150) not null,
     precio float NOT NULL,
     id_categoria int foreign key references Categoria(id_categoria),
 	stock int,
 
 );
+
+
+
+insert into Categoria(nombre) values('Motor')
+insert into Categoria(nombre) values('heladea')
+insert into Categoria(nombre) values('changos')
+
+
+
+
+
