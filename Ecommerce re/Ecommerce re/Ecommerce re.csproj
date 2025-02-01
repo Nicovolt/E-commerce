@@ -123,6 +123,9 @@
     <Content Include="Articulos.aspx">
       <BrowseToURL>~/Articulos.aspx</BrowseToURL>
     </Content>
+    <Content Include="VistaArticulos.aspx">
+      <BrowseToURL>~/VistaArticulos.aspx</BrowseToURL>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -215,6 +218,13 @@
     </Compile>
     <Compile Include="Articulos.aspx.designer.cs">
       <DependentUpon>Articulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VistaArticulos.aspx.cs">
+      <DependentUpon>VistaArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VistaArticulos.aspx.designer.cs">
+      <DependentUpon>VistaArticulos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,5 +17,7 @@ namespace Dominio
         public int IDmarca { get; set; }
         public int IDcategoria { get; set; }
         public int Stock { get; set; }
+
+    
     }
 }
