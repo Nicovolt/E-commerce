@@ -23,15 +23,19 @@ nombre varchar(50),
 
 );
 
+create table Marca(
+id_marca int identity(1,1) primary key,
+nombre varchar(50),
 
-
+);
 
 CREATE TABLE Articulo (
     id_articulo INT IDENTITY(1,1) PRIMARY KEY,
     nombre VARCHAR(90) NOT NULL,
 	descripcion VARCHAR(150) not null,
-    precio float NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
     id_categoria int foreign key references Categoria(id_categoria),
+	id_marca int foreign key references Marca(id_marca),
 	stock int,
 
 );
@@ -42,7 +46,6 @@ insert into Categoria(nombre) values('Motor')
 insert into Categoria(nombre) values('heladea')
 insert into Categoria(nombre) values('changos')
 
-
-
-
-
+insert into Marca(nombre) values('Antec')
+insert into Marca(nombre) values('red dragon')
+insert into Marca(nombre) values('pepito')

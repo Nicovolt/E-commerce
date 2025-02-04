@@ -36,6 +36,7 @@ namespace Ecommerce_re
             art.Descripcion = txtDescripcion.Text;
             art.precio = decimal.Parse(txtPrecio.Text);
             art.IDcategoria = int.Parse(ddlCategoria.SelectedValue);
+            art.IDmarca = int.Parse(ddlMarca.SelectedValue);
             art.Stock = int.Parse(txtStock.Text);
 
                 negocio.Agregar(art);
@@ -57,6 +58,13 @@ namespace Ecommerce_re
             ddlCategoria.DataValueField = "id_categoria";
             ddlCategoria.DataBind();
             ddlCategoria.Items.Insert(0, new ListItem("Seleccione una categoria", ""));
+
+            MarcaNegocio MarcaNegocio = new MarcaNegocio();
+            ddlMarca.DataSource = MarcaNegocio.ListarMarcas();
+            ddlMarca.DataTextField = "nombre";
+            ddlMarca.DataValueField = "id_marca";
+            ddlMarca.DataBind();
+            ddlMarca.Items.Insert(0, new ListItem("Seleccione una marca", ""));
         }
 
         private void MostrarExito(string mensaje)

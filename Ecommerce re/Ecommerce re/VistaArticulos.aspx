@@ -10,12 +10,12 @@
                     <div class="card-body">
                         <h5 class="card-title"><%# Eval("Nombre") %> </h5>
                         <p class="card-text"><%# Eval("Descripcion") %> </p>
-                        <p class="card-text"><strong>Precio: </strong>$<%# Eval("Precio") %></p>
+                        <p class="card-text"><strong>Precio: </strong>$<%# Eval("precio") %></p>
                         <div class="d-flex justify-content-between align-items-center mt-auto">
                            
                             <asp:Button ID="btnCarrito" runat="server" commandName="AgregarCarrito" commandargument='<%# Eval("IdArticulo") %>' Text="Agregar al carrito" CssClass="btn btn-success add-to-cart-btn"/>
                             <asp:Button ID="btnDetalle" runat="server" CommandName="VerDetalle" commandargument='<%# Eval("IdArticulo") %>' Text="Ver detalle" CssClass="btn btn-primary"/>
-                            
+                          
                             
                             
                             

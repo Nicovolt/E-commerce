@@ -27,6 +27,14 @@
                                 </asp:DropDownList>
 
                             </div>
+                            <div>
+                                <label for="ddlmarca" class="form-label">Marca</label>
+                                <asp:DropDownList ID="ddlMarca" runat="server" CssClass="form-control">
+                                    <asp:ListItem Text="seleccione una marca" />
+                                </asp:DropDownList>
+
+
+                            </div>
 
                             <div class="form-group mb-3">
                                 <label for="txtPrecio" class="form-label">Precio</label>

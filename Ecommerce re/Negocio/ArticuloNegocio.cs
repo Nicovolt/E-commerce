@@ -26,8 +26,8 @@ namespace Negocio
                     aux.Nombre = (string)datos.Lector["nombre"];
                     aux.precio = (decimal)datos.Lector["precio"];
                     aux.Stock = (int)datos.Lector["stock"];
-                    aux.IDmarca = (int)datos.Lector["id_marca"];
-                    aux.IDcategoria = (int)datos.Lector["id_categoria"];
+                    aux.IDmarca= datos.Lector["id_marca"] != DBNull.Value ? (int)datos.Lector["id_marca"] : 0;
+                    aux.IDcategoria = datos.Lector["id_categoria"] != DBNull.Value ? (int)datos.Lector["id_categoria"] : 0;
 
                     lista.Add(aux);
                 }
